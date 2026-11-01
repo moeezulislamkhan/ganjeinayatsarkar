@@ -1,0 +1,61 @@
+/* Reset and element defaults */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { flex: 1; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; cursor: pointer; background: none; border: 0; }
+ul { list-style: none; padding: 0; }
+
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 600; line-height: var(--lh-tight); color: var(--primary); }
+h1 { font-size: var(--fs-hero); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
+p + p { margin-top: var(--space-4); }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+::selection { background: var(--gold-300); color: var(--maroon-900); }
+
+/* Layout helpers */
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-5); }
+.section { padding-block: var(--space-8); }
+.section--alt { background: var(--bg-alt); }
+.section--dark { background: var(--maroon-900); color: var(--ivory-100); }
+.section--dark h1, .section--dark h2, .section--dark h3 { color: var(--white); }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+.skip-link {
+  position: absolute; inset-inline-start: var(--space-4); top: -100px;
+  background: var(--gold-500); color: var(--maroon-900); padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm); z-index: 100;
+}
+.skip-link:focus { top: var(--space-3); }
+
+/* Urdu: Nastaliq font and taller lines. Applied by <html dir="rtl" lang="ur"> */
+html[lang="ur"] body { font-family: var(--font-urdu); line-height: var(--lh-urdu); }
+html[lang="ur"] h1, html[lang="ur"] h2, html[lang="ur"] h3, html[lang="ur"] h4 {
+  font-family: var(--font-urdu); line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .container { padding-inline: var(--space-4); }
+  .section { padding-block: var(--space-7); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}

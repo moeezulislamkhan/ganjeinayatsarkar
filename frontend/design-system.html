@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system — Ganj-e-Inayat Sarkar</title>
+<meta name="description" content="Ganj-e-Inayat Sarkar - Silsila-e-Naqshbandia">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/rtl.css">
+</head>
+<body data-page="">
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Design system</p>
+      <h1 class="section-title">Colours, type and components</h1>
+      <p style="margin-top:var(--space-4);max-width:62ch;color:var(--text-muted)">All values come from <code>css/tokens.css</code>. This page is for the team and is not linked from the public menu.</p>
+
+      <h2 style="margin-top:var(--space-7)">Colours</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--space-4);margin-top:var(--space-4)">
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--maroon-900)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">maroon-900<br>#47091A</p></div>
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--maroon-700)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">maroon-700<br>#6B1426</p></div>
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--maroon-500)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">maroon-500<br>#8A2A3D</p></div>
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--gold-500)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">gold-500<br>#B8923F</p></div>
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--gold-300)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">gold-300<br>#D9C08A</p></div>
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--ivory-100);border-bottom:1px solid var(--border)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">ivory-100<br>#FAF5E9</p></div>
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--ivory-200)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">ivory-200<br>#F1E9D6</p></div>
+        <div class="card" style="padding:0;overflow:hidden"><div style="height:70px;background:var(--ink-900)"></div><p style="padding:var(--space-3);font-size:var(--fs-xs)">ink-900<br>#2A1A1D</p></div>
+      </div>
+
+      <h2 style="margin-top:var(--space-7)">Typography</h2>
+      <div class="card" style="margin-top:var(--space-4)">
+        <p class="eyebrow">Eyebrow label</p>
+        <h1 style="margin-top:var(--space-2)">Heading one</h1>
+        <h2>Heading two</h2>
+        <h3>Heading three</h3>
+        <p style="margin-top:var(--space-3)">Body text in Source Sans 3. A center of spiritual guidance, Islamic knowledge and social welfare.</p>
+        <p lang="ur" dir="rtl" style="margin-top:var(--space-4);font-family:var(--font-urdu);line-height:var(--lh-urdu);font-size:1.4rem">حضور گنجِ عنایت سرکار — سلسلۂ نقشبندیہ</p>
+      </div>
+
+      <h2 style="margin-top:var(--space-7)">Buttons</h2>
+      <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4)">
+        <button class="btn btn--primary">Primary</button>
+        <button class="btn btn--outline-dark">Outline</button>
+        <button class="btn btn--gold">Gold</button>
+        <button class="btn btn--primary" disabled>Disabled</button>
+      </div>
+
+      <h2 style="margin-top:var(--space-7)">Card</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5);margin-top:var(--space-4)">
+        <article class="card"><h3>Card title</h3><p style="color:var(--text-muted)">Short description text for a card on a light background.</p></article>
+        <article class="card"><h3>Card title</h3><p style="color:var(--text-muted)">Cards lift slightly on hover.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="js/i18n.js"></script>
+<script src="js/api.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>

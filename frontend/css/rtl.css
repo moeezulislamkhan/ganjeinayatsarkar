@@ -1,0 +1,4 @@
+/* RTL refinements. Most layout flips automatically because we use logical
+   properties (margin-inline, inset-inline, ...). Only exceptions live here. */
+[dir="rtl"] .arrow-icon { transform: scaleX(-1); }   /* mirror directional arrows */
+[dir="rtl"] .num, [dir="rtl"] .latin { direction: ltr; unicode-bidi: embed; }
