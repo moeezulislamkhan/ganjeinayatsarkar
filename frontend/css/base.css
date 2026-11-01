@@ -48,7 +48,7 @@ p + p { margin-top: var(--space-4); }
 /* Urdu: Nastaliq font and taller lines. Applied by <html dir="rtl" lang="ur"> */
 html[lang="ur"] body { font-family: var(--font-urdu); line-height: var(--lh-urdu); }
 html[lang="ur"] h1, html[lang="ur"] h2, html[lang="ur"] h3, html[lang="ur"] h4 {
-  font-family: var(--font-urdu); line-height: 1.8;
+  font-family: var(--font-urdu); line-height: var(--lh-urdu);
 }
 
 @media (max-width: 640px) {

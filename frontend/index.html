@@ -3,35 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ganj-e-Inayat Sarkar — Silsila-e-Naqshbandia</title>
-<meta name="description" content="Ganj-e-Inayat Sarkar - Silsila-e-Naqshbandia">
+<title data-i18n="page.title">Ganj-e-Inayat Sarkar — Silsila-e-Naqshbandia</title>
+<meta name="description" data-i18n-content="page.home.description" content="Ganj-e-Inayat Sarkar — Silsila-e-Naqshbandia">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
 <link rel="stylesheet" href="css/rtl.css">
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 <div id="site-header"></div>
-<main id="main">
-  <section class="section section--dark pattern-bg">
+<main id="main" class="home">
+  <section class="home-hero" data-i18n-aria-label="home.hero.region" aria-label="Featured content">
     <div class="container">
-      <p class="eyebrow">Day 1 build</p>
-      <h1 class="section-title">Ganj-e-Inayat Sarkar</h1>
-      <p style="margin-top:var(--space-4);max-width:60ch;color:var(--gold-100)">Header, footer, language switch and the design system are in place. The home page sections (hero slider, About, Khidmaat cards, Hadith banner, Books, News, Gallery) are built on Day 2.</p>
-      <div style="margin-top:var(--space-5);display:flex;gap:var(--space-3);flex-wrap:wrap">
-        <a class="btn btn--gold" href="design-system.html">View design system</a>
-        <a class="btn btn--outline" href="/api/health">API health check</a>
+      <h1 class="home-hero__title" data-i18n="brand.name">Ganj-e-Inayat Sarkar</h1>
+      <div class="home-slider" id="home-hero-slider" role="region" aria-roledescription="carousel" data-i18n-aria-roledescription="home.slider.description" data-i18n-aria-label="home.hero.region" aria-label="Featured content">
+        <div class="home-slider__slides" aria-live="polite"></div>
+        <div class="home-slider__controls">
+          <button class="home-slider__arrow" type="button" data-slider-prev data-i18n-aria-label="home.slider.previous" aria-label="Previous slide">
+            <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+          <div class="home-slider__dots" role="group" data-i18n-aria-label="home.slider.group" aria-label="Choose slide"></div>
+          <button class="home-slider__arrow" type="button" data-slider-next data-i18n-aria-label="home.slider.next" aria-label="Next slide">
+            <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section home-about" aria-labelledby="home-about-title">
+    <div class="container home-about__layout">
+      <div class="home-about__visual home-placeholder">
+        <img src="assets/placeholders/about.svg" width="640" height="720" loading="lazy" alt="" data-i18n-alt="home.about.imageAlt">
+        <span class="home-placeholder__label" data-i18n="home.placeholder">Placeholder</span>
+      </div>
+      <div class="home-about__copy">
+        <p class="eyebrow" data-i18n="home.about.eyebrow">About the institution</p>
+        <h2 class="section-title" id="home-about-title" data-i18n="home.about.title">A place for learning, guidance and service</h2>
+        <!-- TODO: replace with approved institutional introduction. -->
+        <p class="home-about__text" data-i18n="home.about.body">Placeholder: approved institutional introduction will appear here.</p>
+        <a class="btn btn--primary" href="about.html"><span data-i18n="home.about.cta">Learn More</span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt home-features" aria-labelledby="home-features-title">
+    <div class="container">
+      <div class="home-section-heading">
+        <p class="eyebrow" data-i18n="home.features.eyebrow">Our work</p>
+        <h2 class="section-title" id="home-features-title" data-i18n="home.features.title">Ways we serve</h2>
+      </div>
+      <div class="home-features__grid">
+        <article class="home-feature card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32M12 36V17l12-8 12 8v19M19 36V25h10v11M17 19h.1M31 19h.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 data-i18n="home.features.education">Education &amp; Islamic Learning</h3>
+        </article>
+        <article class="home-feature card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40s-16-9-16-21a9 9 0 0 1 16-6 9 9 0 0 1 16 6c0 12-16 21-16 21Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M18 24h12M24 18v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3 data-i18n="home.features.guidance">Spiritual Guidance</h3>
+        </article>
+        <article class="home-feature card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 39s-15-9-15-20a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11-15 20-15 20Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 25h16M24 17v16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3 data-i18n="home.features.welfare">Social Welfare &amp; Community Service</h3>
+        </article>
+        <article class="home-feature card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12c6-3 11-2 16 2v23c-5-4-10-5-16-2V12Zm32 0c-6-3-11-2-16 2v23c5-4 10-5 16-2V12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13 18h6m-6 6h6m10-6h6m-6 6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3 data-i18n="home.features.research">Research &amp; Publications</h3>
+        </article>
+        <article class="home-feature card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8 40 17v14l-16 9-16-9V17l16-9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8 17 16 9 16-9M24 26v14M16 12l16 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <h3 data-i18n="home.features.humanity">Khidmaat for Humanity</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark pattern-bg home-hadith" aria-labelledby="home-hadith-title">
+    <div class="container home-hadith__layout">
+      <div class="home-hadith__copy">
+        <p class="eyebrow" data-i18n="home.hadith.eyebrow">Sahih Bukhari</p>
+        <h2 id="home-hadith-title" data-i18n="home.hadith.title">Authentic Ahadith for Guidance</h2>
+        <!-- TODO: replace with verified Hadith text and approved references. -->
+        <p class="home-hadith__placeholder" data-i18n="home.hadith.placeholder">Verified Hadith text will appear here.</p>
+        <p class="home-hadith__text" data-i18n="home.hadith.body">A verified collection will be presented here.</p>
+        <a class="btn btn--gold" href="hadith.html" data-i18n="home.hadith.cta">Browse Hadith</a>
+      </div>
+      <div class="home-hadith__visual home-placeholder">
+        <img src="assets/placeholders/hadith.svg" width="480" height="360" loading="lazy" alt="" data-i18n-alt="home.hadith.imageAlt">
+        <span class="home-placeholder__label" data-i18n="home.placeholder">Placeholder</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section home-library" data-i18n-aria-label="home.library.region" aria-label="Publications and latest updates">
+    <div class="container home-library__layout">
+      <section class="home-library__column" aria-labelledby="home-books-title">
+        <div class="home-section-heading home-section-heading--row">
+          <div><p class="eyebrow" data-i18n="home.books.eyebrow">From our library</p><h2 class="section-title" id="home-books-title" data-i18n="home.books.title">Books &amp; Articles</h2></div>
+          <a class="home-text-link" href="publications.html"><span data-i18n="home.books.all">View All Publications</span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+        <!-- TODO: replace placeholder book records and covers with approved publications. -->
+        <div class="home-books__grid" id="home-books"></div>
+      </section>
+      <section class="home-library__column home-news" aria-labelledby="home-news-title">
+        <div class="home-section-heading">
+          <p class="eyebrow" data-i18n="home.news.eyebrow">From the institution</p>
+          <h2 class="section-title" id="home-news-title" data-i18n="home.news.title">Latest Updates</h2>
+        </div>
+        <!-- TODO: replace placeholder news records and dates with approved updates. -->
+        <div class="home-news__list" id="home-news-list"></div>
+        <a class="btn btn--outline-dark" href="news.html"><span data-i18n="home.news.all">View All News</span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+      </section>
+    </div>
+  </section>
+
+  <section class="section section--alt home-gallery" aria-labelledby="home-gallery-title">
+    <div class="container">
+      <div class="home-section-heading home-section-heading--row">
+        <div><p class="eyebrow" data-i18n="home.gallery.eyebrow">Moments and places</p><h2 class="section-title" id="home-gallery-title" data-i18n="home.gallery.title">Gallery</h2></div>
+        <div class="home-gallery__controls">
+          <button class="home-slider__arrow" type="button" data-gallery-prev data-i18n-aria-label="home.gallery.previous" aria-label="Scroll gallery backward"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <button class="home-slider__arrow" type="button" data-gallery-next data-i18n-aria-label="home.gallery.next" aria-label="Scroll gallery forward"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        </div>
+      </div>
+      <!-- TODO: replace placeholder gallery images with approved institutional photos. -->
+      <div class="home-gallery__scroller" id="home-gallery-scroller" tabindex="0" data-i18n-aria-label="home.gallery.scroller" aria-label="Gallery images"></div>
+      <a class="btn btn--primary home-gallery__link" href="gallery.html" data-i18n="home.gallery.cta">View Gallery</a>
     </div>
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="js/i18n.js"></script>
-<script src="js/api.js"></script>
-<script src="js/layout.js"></script>
+<script defer src="js/i18n.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/layout.js"></script>
+<script defer src="js/slider.js"></script>
+<script defer src="js/pages/home.js"></script>
 </body>
 </html>

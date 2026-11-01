@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="page.publications.title">Publications</title><meta name="description" data-i18n-content="page.publications.description" content="Browse placeholder books and articles.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/rtl.css">
+</head>
+<body data-page="publications"><a class="skip-link" href="#main" data-i18n="skip">Skip to content</a><div id="site-header"></div>
+<main id="main">
+  <header class="page-hero pattern-bg"><div class="container"><p class="eyebrow" data-i18n="pub.eyebrow">Library</p><h1 data-i18n="page.publications.title">Publications</h1><nav class="breadcrumb" aria-label="Breadcrumb" data-i18n-aria-label="shared.breadcrumb"><ol><li><a href="index.html" data-i18n="shared.home">Home</a></li><li aria-current="page" data-i18n="page.publications.title">Publications</li></ol></nav></div></header>
+  <section class="section pub-main"><div class="container"><p class="eyebrow" data-i18n="pub.eyebrow">Library</p><h2 class="section-title" data-i18n="pub.introTitle">Books &amp; Articles</h2><!-- TODO: replace placeholder records and covers with approved publication data. --><p class="page-copy pub-main__intro" data-i18n="pub.introText">Placeholder: approved publication details will appear here.</p>
+    <div class="chips pub-filters" role="group" aria-label="Filter publications" data-i18n-aria-label="pub.filtersLabel">
+      <button type="button" data-pub-filter="all" aria-pressed="true" data-i18n="pub.filterAll">All</button>
+      <button type="button" data-pub-filter="book" aria-pressed="false" data-i18n="pub.filterBooks">Books</button>
+      <button type="button" data-pub-filter="article" aria-pressed="false" data-i18n="pub.filterArticles">Articles</button>
+    </div>
+    <div class="pub-grid" id="pub-grid" aria-label="Publications" data-i18n-aria-label="pub.listLabel"></div>
+    <p class="pub-empty" id="pub-empty" role="status" hidden data-i18n="pub.empty">No publications in this category yet.</p>
+  </div></section>
+</main><div id="site-footer"></div>
+<script defer src="js/i18n.js"></script><script defer src="js/api.js"></script><script defer src="js/layout.js"></script><script defer src="js/pages/publications.js"></script>
+</body></html>

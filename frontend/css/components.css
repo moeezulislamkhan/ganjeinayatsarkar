@@ -92,6 +92,11 @@ html[lang="ur"] .brand__text b { font-family: var(--font-urdu); line-height: 1.7
   .brand__text b { font-size: 1.1rem; }
   .brand__text small { display: none; }
 }
+@media (max-width: 380px) {
+  .site-header__inner { gap: var(--space-3); }
+  .brand { gap: var(--space-2); }
+  .brand__text b { font-size: var(--fs-sm); }
+}
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--maroon-900); color: var(--ivory-100); border-top: 2px solid var(--gold-500); }
@@ -109,3 +114,54 @@ html[lang="ur"] .site-footer h3 { font-family: var(--font-urdu); }
 .site-footer__bar .container { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); justify-content: space-between; }
 @media (max-width: 1024px) { .site-footer__grid { grid-template-columns: 1fr 1fr; } .site-footer__grid > :first-child { grid-column: 1 / -1; } }
 @media (max-width: 640px) { .site-footer__grid { grid-template-columns: 1fr; gap: var(--space-5); } }
+
+/* ---------- Shared content-page components ---------- */
+.page-hero { padding-block: var(--space-7); color: var(--ivory-100); background-color: var(--maroon-900); }
+.page-hero h1 { color: var(--white); }
+.page-hero .eyebrow { color: var(--gold-300); }
+.breadcrumb { margin-top: var(--space-4); color: var(--ivory-200); font-size: var(--fs-sm); }
+.breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.breadcrumb li + li::before { content: "/"; margin-inline-end: var(--space-2); color: var(--gold-300); }
+.breadcrumb [aria-current="page"] { color: var(--gold-300); }
+.badge { display: inline-flex; align-items: center; padding: var(--space-1) var(--space-3); border: 1px solid var(--gold-500); border-radius: var(--radius-sm); color: var(--maroon-900); background: var(--gold-100); font-size: var(--fs-xs); font-weight: 600; }
+.tabs, .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.tabs [role="tab"], .chips button { min-height: 2.75rem; padding: var(--space-2) var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-lg); color: var(--primary); background: var(--surface); }
+.tabs [role="tab"][aria-selected="true"], .chips button[aria-pressed="true"] { border-color: var(--primary); color: var(--ivory-50); background: var(--primary); }
+.timeline { position: relative; display: grid; gap: var(--space-5); max-width: 52rem; margin-inline: auto; padding-inline-start: var(--space-7); }
+.timeline::before { position: absolute; inset-block: var(--space-3); inset-inline-start: var(--space-3); width: 2px; background: var(--gold-500); content: ""; }
+.timeline__item { position: relative; }
+.timeline__item::before { position: absolute; inset-inline-start: calc(-1 * var(--space-5)); top: var(--space-5); width: var(--space-3); height: var(--space-3); border: 2px solid var(--gold-600); border-radius: 50%; background: var(--ivory-50); content: ""; }
+.pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-3); }
+.pagination button { min-width: 2.75rem; min-height: 2.75rem; padding-inline: var(--space-3); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--primary); background: var(--surface); }
+.pagination button:disabled { opacity: 0.6; }
+.lightbox[hidden] { display: none; }
+.lightbox-open { overflow: hidden; }
+.lightbox { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: var(--space-4); background: rgba(42, 26, 29, 0.92); }
+.lightbox__panel { position: relative; width: min(100%, 64rem); max-height: 100%; padding: var(--space-5); border: 1px solid var(--gold-500); border-radius: var(--radius-lg); color: var(--ivory-100); background: var(--maroon-900); }
+.lightbox__image-wrap { display: grid; place-items: center; min-height: 0; }
+.lightbox__image { width: auto; max-width: 100%; max-height: 70vh; aspect-ratio: 4 / 3; object-fit: contain; }
+.lightbox__caption { margin-top: var(--space-3); text-align: center; }
+.lightbox__controls { display: flex; justify-content: space-between; gap: var(--space-3); margin-top: var(--space-4); }
+.lightbox__controls button, .lightbox__close { min-width: 2.75rem; min-height: 2.75rem; padding: var(--space-2) var(--space-3); border: 1px solid var(--gold-300); border-radius: var(--radius-sm); color: var(--ivory-100); }
+.lightbox__close { position: absolute; inset-block-start: var(--space-3); inset-inline-end: var(--space-3); }
+.form-field { display: grid; gap: var(--space-2); }
+.form-field + .form-field { margin-top: var(--space-4); }
+.form-field label { font-weight: 600; }
+.form-field input, .form-field textarea { width: 100%; min-height: 2.75rem; padding: var(--space-3); border: 1px solid var(--ink-600); border-radius: var(--radius-sm); color: var(--text); background: var(--surface); font: inherit; }
+.form-field textarea { min-height: 9rem; resize: vertical; }
+.form-field [aria-invalid="true"] { border-color: var(--danger); }
+.form-field__error { min-height: var(--fs-base); color: var(--danger); font-size: var(--fs-sm); }
+.alert { padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.alert--success { border-color: var(--success); color: var(--maroon-900); background: var(--gold-100); }
+.alert--error { border-color: var(--danger); color: var(--danger); background: var(--ivory-50); }
+.placeholder-box { position: relative; overflow: hidden; border: 1px dashed var(--gold-600); border-radius: var(--radius-md); background: repeating-linear-gradient(135deg, var(--ivory-200), var(--ivory-200) var(--space-2), var(--ivory-100) var(--space-2), var(--ivory-100) var(--space-4)); }
+.placeholder-box__label { position: absolute; z-index: 1; inset-block-start: var(--space-2); inset-inline-start: var(--space-2); display: inline-block; padding: var(--space-1) var(--space-3); border: 1px dashed var(--gold-600); border-radius: var(--radius-sm); color: var(--maroon-900); background: var(--ivory-50); font-size: var(--fs-xs); }
+.page-copy { max-width: 68ch; color: var(--text-muted); }
+.page-copy > * + * { margin-top: var(--space-4); }
+html[lang="ur"] .breadcrumb, html[lang="ur"] .badge, html[lang="ur"] .tabs, html[lang="ur"] .chips,
+html[lang="ur"] .form-field, html[lang="ur"] .alert, html[lang="ur"] .pagination { line-height: var(--lh-urdu); }
+@media (max-width: 640px) {
+  .page-hero { padding-block: var(--space-6); }
+  .lightbox__panel { padding: var(--space-4); }
+  .lightbox__image { max-height: 58vh; }
+}

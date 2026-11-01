@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="page.gallery.title">Gallery</title><meta name="description" data-i18n-content="page.gallery.description" content="Browse placeholder gallery images.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/rtl.css">
+</head>
+<body data-page="gallery"><a class="skip-link" href="#main" data-i18n="skip">Skip to content</a><div id="site-header"></div>
+<main id="main">
+  <header class="page-hero pattern-bg"><div class="container"><p class="eyebrow" data-i18n="gallery.eyebrow">Images</p><h1 data-i18n="page.gallery.title">Gallery</h1><nav class="breadcrumb" aria-label="Breadcrumb" data-i18n-aria-label="shared.breadcrumb"><ol><li><a href="index.html" data-i18n="shared.home">Home</a></li><li aria-current="page" data-i18n="page.gallery.title">Gallery</li></ol></nav></div></header>
+  <section class="section gallery-main"><div class="container"><p class="eyebrow" data-i18n="gallery.eyebrow">Images</p><h2 class="section-title" data-i18n="gallery.introTitle">Gallery</h2><!-- TODO: replace placeholder images with approved institutional photographs. --><p class="page-copy gallery-main__intro" data-i18n="gallery.introText">Placeholder: approved institutional photographs will appear here.</p>
+    <div class="chips gallery-filters" role="group" aria-label="Filter gallery" data-i18n-aria-label="gallery.filterLabel">
+      <button type="button" data-gallery-filter="all" aria-pressed="true" data-i18n="gallery.filterAll">All images</button>
+      <button type="button" data-gallery-filter="places" aria-pressed="false" data-i18n="gallery.filterPlaces">Places</button>
+      <button type="button" data-gallery-filter="activities" aria-pressed="false" data-i18n="gallery.filterActivities">Activities</button>
+      <button type="button" data-gallery-filter="details" aria-pressed="false" data-i18n="gallery.filterDetails">Details</button>
+    </div>
+    <div class="gallery-grid" id="gallery-grid" aria-label="Gallery images" data-i18n-aria-label="gallery.listLabel"></div>
+  </div></section>
+</main>
+<div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer" data-i18n-aria-label="gallery.lightboxLabel" hidden>
+  <div class="lightbox__panel">
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close image viewer" data-i18n-aria-label="gallery.close">×</button>
+    <div class="lightbox__image-wrap"><img class="lightbox__image" src="assets/placeholders/gallery-1.svg" width="480" height="356" alt="" data-lightbox-image></div>
+    <p class="lightbox__caption" data-lightbox-caption data-i18n="gallery.caption">Placeholder image</p>
+    <div class="lightbox__controls"><button type="button" data-lightbox-prev data-i18n="gallery.previous">Previous image</button><button type="button" data-lightbox-next data-i18n="gallery.next">Next image</button></div>
+  </div>
+</div>
+<div id="site-footer"></div>
+<script defer src="js/i18n.js"></script><script defer src="js/api.js"></script><script defer src="js/layout.js"></script><script defer src="js/pages/gallery.js"></script>
+</body></html>
